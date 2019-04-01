@@ -68,8 +68,8 @@ def renderModelPredict() :
                             {'label' : 'Moving Averange', 'value' : 'MA'},
                             {'label' : 'Linear Regresression', 'value' : 'LR'},
                             {'label' : 'KNN', 'value' : 'KNN'},
-                            {'label' : 'Auto Arima', 'value' : 'AA'},
-                            {'label' : 'LSTM', 'value' : 'LSTM'}
+                            {'label' : 'On Proggress', 'value' : 'AA'},
+                            {'label' : 'On Proggress', 'value' : 'LSTM'}
                         ], value='None.1' )
                     ],className='col-4'),
                     html.Div([
@@ -156,8 +156,8 @@ def renderModelPredict1() :
                             {'label' : 'Moving Averange', 'value' : 'MA'},
                             {'label' : 'Linear Regresression', 'value' : 'LR'},
                             {'label' : 'KNN', 'value' : 'KNN'},
-                            {'label' : 'Auto Arima', 'value' : 'AA'},
-                            {'label' : 'LSTM', 'value' : 'LSTM'}
+                            {'label' : 'On Proggress', 'value' : 'AA'},
+                            {'label' : 'On Proggress', 'value' : 'LSTM'}
                         ], value='None.1' )
                     ],className='col-4'),
                     html.Div([

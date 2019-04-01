@@ -17,7 +17,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
 
-loadModellogreg = pickle.load(open('logreg.sav', 'rb'))
+loadModellinreg = pickle.load(open('linreg.sav', 'rb'))
 loadAutoArima = pickle.load(open('autoarima.sav', 'rb'))
 loadLSTM = pickle.load(open('LSTM.sav', 'rb'))
 
@@ -117,8 +117,8 @@ def updateDict3(train,test,ML,symbol) :
             b = a/lenvalidpreds
             preds.append(b)
     elif ML == 'LR':
-        loadModellogreg.fit(x_train, y_train)
-        preds = loadModellogreg.predict(x_test)
+        loadModellinreg.fit(x_train, y_train)
+        preds = loadModellinreg.predict(x_test)
     elif ML == 'KNN':
         from sklearn import neighbors
         from sklearn.model_selection import GridSearchCV
@@ -136,7 +136,7 @@ def updateDict3(train,test,ML,symbol) :
         from pmdarima.arima import auto_arima
         model = auto_arima(y_train, start_p=1, start_q=1,max_p=3, max_q=3, m=12,start_P=0, seasonal=True,d=1, D=1, trace=True,error_action='ignore',suppress_warnings=True)
         model.fit(y_train)
-        # preds = loadModellogreg.predict(x_test)
+        # preds = loadModellinreg.predict(x_test)
         periods = len(datastockss)- len(y_train)
         preds = model.predict(n_periods=periods)
         # preds = pd.DataFrame(preds,index = valid.index,columns=['Prediction'])
@@ -378,8 +378,8 @@ def updateDict31(train1,test1,ML1,symbol1) :
             b = a/lenvalidpreds
             preds.append(b)
     elif ML1 == 'LR':
-        loadModellogreg.fit(x_train, y_train)
-        preds = loadModellogreg.predict(x_test)
+        loadModellinreg.fit(x_train, y_train)
+        preds = loadModellinreg.predict(x_test)
     elif ML1 == 'KNN':
         from sklearn import neighbors
         from sklearn.model_selection import GridSearchCV
@@ -395,7 +395,7 @@ def updateDict31(train1,test1,ML1,symbol1) :
         preds = model.predict(x_test)
     elif ML1 == 'AA':
         loadAutoArima.fit(y_train)
-        # preds = loadModellogreg.predict(x_test)
+        # preds = loadModellinreg.predict(x_test)
         periods = len(datastockss)- len(y_train)
         preds = model.predict(n_periods=periods)
         # preds = pd.DataFrame(preds,index = valid.index,columns=['Prediction'])
