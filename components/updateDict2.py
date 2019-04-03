@@ -547,7 +547,7 @@ def datastocksbacktestsaham1(datein2, dateout2 ,monthin2,monthout2,yearin2,yearo
     # symbols = "tlkm"
 
     # datastocks = web.DataReader("AAPL", "yahoo", start, end)
-    datastocks = pdr.get_data_yahoo(symbols, start=datetime(startyear, startmonth, startdate), end=datetime(endyear, endmonth, enddate))
+    datastocks = pdr.get_data_yahoo(symbols+'.JK', start=datetime(startyear, startmonth, startdate), end=datetime(endyear, endmonth, enddate))
     datastocks['symbol'] = symbols
     datastocks["20d"] = np.round(datastocks["Close"].rolling(window = 20, center = False).mean(), 2)
     datastocks["50d"] = np.round(datastocks["Close"].rolling(window = 50, center = False).mean(), 2)
