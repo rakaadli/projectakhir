@@ -28,7 +28,7 @@ saham2plot = pd.read_csv('saham2plot.csv')
 saham2plotML = pd.read_csv('saham2plotML.csv')
 dfbacktest1 = pd.read_csv('datastocks_backtest.csv')
 
-loadModel = pickle.load(open('linreg.sav', 'rb'))
+# loadModel = pickle.load(open('linreg.sav', 'rb'))
 app.title = 'Dashboard Saham'
 
 

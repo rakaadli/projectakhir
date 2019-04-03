@@ -13,7 +13,7 @@ symbol = (saham['symbol'][1])
 # print(symbol)
 saham1 = pd.read_csv('saham5.csv')
 # df1=pd.read
-symbol1 = (saham['symbol'][1])
+symbol2 = (saham['symbol'][1])
 saham2plot = pd.read_csv('saham2plot.csv')
 saham2plotML = pd.read_csv('saham2plotML.csv')
 
@@ -82,7 +82,7 @@ def renderlineplot(df) :
 
 def renderlineplot1(df) :
     return html.Div([
-                html.H1('Plot SAHAM with Machine Learning  '+str(df['ML'][1])+' '+str(symbol1) , className='h1'),
+                html.H1('Plot SAHAM with Machine Learning  '+str(df['ML'][1])+' '+str(symbol2) , className='h1'),
                 dcc.Graph(
                     id='Plot2',
                     figure={
@@ -135,7 +135,7 @@ def renderlineplot2(df) :
 
 def renderlineplot3(df) :
     return html.Div([
-                html.H1('Plot SAHAM with Machine Learning  '+str(df['ML'][1])+' '+str(symbol1) , className='h1'),
+                html.H1('Plot SAHAM with Machine Learning  '+str(df['ML'][2])+' '+str(df['symbol'][1]) , className='h1'),
                 dcc.Graph(
                     id='Plot4',
                     figure={
@@ -189,7 +189,7 @@ def renderline2plot(df) :
 # ['symbol']
 def renderline2plotML(df) :
     return html.Div([
-                html.H1('Plot SAHAM with Machine Learning  '+str(df['ML'][1])+' '+str(symbol1) + ' dan ' +str(df['ML'][int(len(df['symbol'])-1)]+' '+str(df['symbol'][int(len(df['symbol'])-1)])) , className='h1'),
+                html.H1('Plot SAHAM with Machine Learning  '+str(df['ML'][1])+' '+str(symbol2) + ' dan ' +str(df['ML'][int(len(df['symbol'])-1)]+' '+str(df['symbol'][int(len(df['symbol'])-1)])) , className='h1'),
                 dcc.Graph(
                     id='Plot6',
                     figure={

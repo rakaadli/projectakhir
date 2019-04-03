@@ -67,7 +67,7 @@ def renderModelPredict() :
                         dcc.Dropdown(id='ML', options=[
                             {'label' : 'Moving Averange', 'value' : 'MA'},
                             {'label' : 'Linear Regresression', 'value' : 'LR'},
-                            {'label' : 'KNN', 'value' : 'KNN'},
+                            {'label' : 'On Proggress', 'value' : 'KNN'},
                             {'label' : 'On Proggress', 'value' : 'AA'},
                             {'label' : 'On Proggress', 'value' : 'LSTM'}
                         ], value='None.1' )
@@ -91,7 +91,7 @@ def renderModelPredict() :
 
 def renderModelPredict1() :
     return html.Div([
-                html.H1('Test Saham', className='h1'),
+                html.H1('Test Saham 2', className='h1'),
                  html.Div(children=[
                     html.Div([
                         html.P('Tanggal mulai prediksi : ')
@@ -155,7 +155,7 @@ def renderModelPredict1() :
                         dcc.Dropdown(id='ML1', options=[
                             {'label' : 'Moving Averange', 'value' : 'MA'},
                             {'label' : 'Linear Regresression', 'value' : 'LR'},
-                            {'label' : 'KNN', 'value' : 'KNN'},
+                            {'label' : 'On Proggress', 'value' : 'KNN'},
                             {'label' : 'On Proggress', 'value' : 'AA'},
                             {'label' : 'On Proggress', 'value' : 'LSTM'}
                         ], value='None.1' )
